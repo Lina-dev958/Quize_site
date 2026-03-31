@@ -3,77 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>اختبار قضية الأسرى الفلسطينيين</title>
+    <title>اختبار التوعية بقضية الأسرى الفلسطينيين</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f4f9;
+            background-color: #f0f2f5;
             margin: 0;
             padding: 20px;
             color: #333;
         }
         .container {
-            max-width: 800px;
+            max-width: 850px;
             margin: auto;
             background: white;
-            padding: 30 hidden;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            padding: 25px;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
         }
         h1 {
             text-align: center;
-            color: #2c3e50;
-            border-bottom: 3px solid #e74c3c;
-            padding-bottom: 10px;
+            color: #1a5d1a;
+            border-bottom: 4px solid #e74c3c;
+            padding-bottom: 15px;
+            margin-bottom: 10px;
+        }
+        .intro-text {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 1.1em;
         }
         .question {
             margin-bottom: 25px;
-            padding: 15px;
-            border-right: 5px solid #3498db;
-            background: #fafafa;
+            padding: 20px;
+            border-right: 6px solid #27ae60;
+            background: #fdfdfd;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+        }
+        .question p {
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-top: 0;
+            color: #2c3e50;
         }
         .options {
             list-style: none;
             padding: 0;
         }
         .options li {
-            margin: 10px 0;
-            padding: 10px;
-            background: #eee;
-            border-radius: 5px;
+            margin: 12px 0;
+            padding: 12px 15px;
+            background: #f1f1f1;
+            border-radius: 8px;
             cursor: pointer;
-            transition: 0.3s;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
         }
         .options li:hover {
-            background: #ddd;
+            background: #e1e1e1;
         }
         .options input {
-            margin-left: 10px;
+            margin-left: 15px;
+            transform: scale(1.2);
+            cursor: pointer;
         }
         button {
             display: block;
             width: 100%;
-            padding: 15px;
-            background: #27ae60;
+            padding: 18px;
+            background: #e74c3c;
             color: white;
             border: none;
-            border-radius: 5px;
-            font-size: 18px;
-            cursor: pointer;
-            margin-top: 20px;
-        }
-        button:hover {
-            background: #219150;
-        }
-        #result {
-            margin-top: 20px;
-            padding: 20px;
-            text-align: center;
+            border-radius: 10px;
             font-size: 20px;
             font-weight: bold;
+            cursor: pointer;
+            margin-top: 30px;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background: #c0392b;
+        }
+        #result {
+            margin-top: 25px;
+            padding: 25px;
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
             display: none;
-            border-radius: 10px;
+            border-radius: 12px;
+            border: 2px solid transparent;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #888;
+            font-size: 0.9em;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+        /* العبارة المطلوبة باللون الأزرق */
+        .tech-club {
+            color: #0056b3;
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-top: 15px;
+            display: block;
         }
     </style>
 </head>
@@ -81,7 +118,7 @@
 
 <div class="container">
     <h1>🇵🇸 اختبار التوعية بقضية الأسرى</h1>
-    <p style="text-align: center;">اختبر معلوماتك حول قضية الأسرى والمعتقلين في سجون الاحتلال</p>
+    <p class="intro-text">شارك في الاختبار لتعزيز معرفتك بقضية أسرى الحرية</p>
     
     <form id="quizForm">
         <div class="question">
@@ -90,55 +127,1043 @@
                 <li><input type="radio" name="q1" value="0"> الترفيه</li>
                 <li><input type="radio" name="q1" value="1"> زيادة الوعي والمسؤولية المجتمعية</li>
                 <li><input type="radio" name="q1" value="0"> إضاعة الوقت</li>
+                <li><input type="radio" name="q1" value="0"> تقليل الدراسة</li>
             </ul>
         </div>
 
         <div class="question">
-            <p>2. ما الفرق الأساسي بين الأسير والمعتقل الإداري؟</p>
+            <p>2. أي من التالي يُعتبر وسيلة لنقل قضية الأسرى إلى العالم؟</p>
             <ul class="options">
-                <li><input type="radio" name="q2" value="0"> لا يوجد فرق</li>
-                <li><input type="radio" name="q2" value="1"> الإداري لا يُقدم للمحاكمة</li>
-                <li><input type="radio" name="q2" value="0"> الأسير لا يُحاكم</li>
+                <li><input type="radio" name="q2" value="0"> الصمت</li>
+                <li><input type="radio" name="q2" value="1"> نشر القصص والتقارير</li>
+                <li><input type="radio" name="q2" value="0"> تجاهل القضية</li>
+                <li><input type="radio" name="q2" value="0"> إخفاء المعلومات</li>
             </ul>
         </div>
 
         <div class="question">
-            <p>3. متى يُحيي الفلسطينيون يوم الأسير؟</p>
+            <p>3. ما الفرق الأساسي بين الأسير والمعتقل الإداري؟</p>
             <ul class="options">
-                <li><input type="radio" name="q3" value="0"> 1 يناير</li>
-                <li><input type="radio" name="q3" value="1"> 17 أبريل</li>
-                <li><input type="radio" name="q3" value="0"> 15 مايو</li>
+                <li><input type="radio" name="q3" value="0"> لا يوجد فرق</li>
+                <li><input type="radio" name="q3" value="1"> الإداري لا يُقدم للمحاكمة</li>
+                <li><input type="radio" name="q3" value="0"> الأسير لا يُحاكم</li>
+                <li><input type="radio" name="q3" value="0"> الإداري يُحاكم أكثر</li>
             </ul>
         </div>
 
-        <button type="button" onclick="checkResult()">عرض النتيجة</button>
+        <div class="question">
+            <p>4. أي من التالي يُعتبر سمة أساسية للاعتقال الإداري؟</p>
+            <ul class="options">
+                <li><input type="radio" name="q4" value="0"> وجود حكم قضائي نهائي</li>
+                <li><input type="radio" name="q4" value="0"> تحديد مدة ثابتة لا تتغير</li>
+                <li><input type="radio" name="q4" value="1"> إمكانية التجديد بدون محاكمة</li>
+                <li><input type="radio" name="q4" value="0"> وجود هيئة محلفين</li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <p>5. أي من الفئات التالية شهدت حالات اعتقال ضمن الأسرى الفلسطينيين؟</p>
+            <ul class="options">
+                <li><input type="radio" name="q5" value="0"> الأطفال</li>
+                <li><input type="radio" name="q5" value="0"> النساء</li>
+                <li><input type="radio" name="q5" value="0"> كبار السن</li>
+                <li><input type="radio" name="q5" value="1"> جميع ما سبق</li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <p>6. أي من التالي يُستخدم لوصف عزل الأسير عن باقي الأسرى لفترة طويلة؟</p>
+            <ul class="options">
+                <li><input type="radio" name="q6" value="0"> الاعتقال المفتوح</li>
+                <li><input type="radio" name="q6" value="1"> العزل الانفرادي</li>
+                <li><input type="radio" name="q6" value="0"> الحرية المؤقتة</li>
+                <li><input type="radio" name="q6" value="0"> النقل الجماعي</li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <p>7. أي من التالي يُعد من وسائل احتجاج الأسرى داخل السجون؟</p>
+            <ul class="options">
+                <li><input type="radio" name="q7" value="0"> السفر</li>
+                <li><input type="radio" name="q7" value="1"> الإضراب عن الطعام</li>
+                <li><input type="radio" name="q7" value="0"> الدراسة فقط</li>
+                <li><input type="radio" name="q7" value="0"> الترفيه</li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <p>8. ما اسم الهيئة الفلسطينية المختصة بشؤون الأسرى؟</p>
+            <ul class="options">
+                <li><input type="radio" name="q8" value="0"> وزارة التعليم</li>
+                <li><input type="radio" name="q8" value="1"> هيئة شؤون الأسرى والمحررين</li>
+                <li><input type="radio" name="q8" value="0"> وزارة السياحة</li>
+                <li><input type="radio" name="q8" value="0"> وزارة النقل</li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <p>9. أي جهة قانونية دولية تُعنى بحماية حقوق الأسرى أثناء النزاعات؟</p>
+            <ul class="options">
+                <li><input type="radio" name="q9" value="0"> منظمة التجارة العالمية</li>
+                <li><input type="radio" name="q9" value="1"> اتفاقيات جنيف</li>
+                <li><input type="radio" name="q9" value="0"> اليونسكو</li>
+                <li><input type="radio" name="q9" value="0"> البنك الدولي</li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <p>10. متى يُحيي الفلسطينيون يوم الأسير؟</p>
+            <ul class="options">
+                <li><input type="radio" name="q10" value="0"> 1 يناير</li>
+                <li><input type="radio" name="q10" value="1"> 17 أبريل</li>
+                <li><input type="radio" name="q10" value="0"> 15 مايو</li>
+                <li><input type="radio" name="q10" value="0"> 10 ديسمبر</li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <p>11. ما المقصود بالاعتقال الإداري؟</p>
+            <ul class="options">
+                <li><input type="radio" name="q11" value="0"> سجن بعد محاكمة علنية</li>
+                <li><input type="radio" name="q11" value="1"> احتجاز بدون تهمة أو محاكمة لفترة قابلة للتجديد</li>
+                <li><input type="radio" name="q11" value="0"> غرامة مالية</li>
+                <li><input type="radio" name="q11" value="0"> عقوبة دراسية</li>
+            </ul>
+        </div>
+
+        <button type="button" onclick="checkResult()">إرسال الإجابات وعرض النتيجة</button>
     </form>
 
     <div id="result"></div>
+    
+    <div class="footer">
+        <div>الحرية للأسرى .. المجد للوطن</div>
+        <span class="tech-club">النادي التكنولوجي - الكلية الجامعية للعلوم التطبيقية</span>
+    </div>
 </div>
 
 <script>
     function checkResult() {
         let score = 0;
-        let total = 3; // يمكنك إضافة باقي الأسئلة هنا بنفس النمط
+        let totalQuestions = 11;
         let form = document.getElementById('quizForm');
         let formData = new FormData(form);
 
+        let answeredQuestions = 0;
         for (let value of formData.values()) {
             score += parseInt(value);
+            answeredQuestions++;
         }
 
         let resultDiv = document.getElementById('result');
         resultDiv.style.display = 'block';
-        resultDiv.innerHTML = "درجتك هي: " + score + " من " + total;
         
-        if(score === total) {
-            resultDiv.style.background = "#d4edda";
-            resultDiv.innerHTML += "<br> ممتاز! لديك وعي رائع بالقضية.";
-        } else {
+        if (answeredQuestions < totalQuestions) {
             resultDiv.style.background = "#fff3cd";
-            resultDiv.innerHTML += "<br> حاول مراجعة المعلومات مرة أخرى.";
+            resultDiv.style.borderColor = "#ffeeba";
+            resultDiv.style.color = "#856404";
+            resultDiv.innerHTML = "يرجى الإجابة على جميع الأسئلة (أجبت على " + answeredQuestions + " من " + totalQuestions + ")";
+            return;
         }
+
+        resultDiv.innerHTML = "درجتك النهائية: " + score + " من " + totalQuestions;
+        
+        if(score >= 9) {
+            resultDiv.style.background = "#d4edda";
+            resultDiv.style.borderColor = "#c3e6cb";
+            resultDiv.style.color = "#155724";
+            resultDiv.innerHTML += "<br> ممتاز! وعيك بقضية الأسرى مشرف جداً.";
+        } else if(score >= 6) {
+            resultDiv.style.background = "#d1ecf1";
+            resultDiv.style.borderColor = "#bee5eb";
+            resultDiv.style.color = "#0c5460";
+            resultDiv.innerHTML += "<br> جيد، ولكن ننصحك بالقراءة أكثر عن تفاصيل قضية الأسرى.";
+        } else {
+            resultDiv.style.background = "#f8d7da";
+            resultDiv.style.borderColor = "#f5c6cb";
+            resultDiv.style.color = "#721c24";
+            resultDiv.innerHTML += "<br> من المهم مراجعة المعلومات حول قضيتنا الوطنية.";
+        }
+        
+        resultDiv.scrollIntoView({ behavior: 'smooth' });
+    }
+</script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اختبار التوعية بقضية الأسرى الفلسطينيين</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        .container {
+            max-width: 850px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #1a5d1a;
+            border-bottom: 4px solid #e74c3c;
+            padding-bottom: 15px;
+            margin-bottom: 10px;
+        }
+        .intro-text {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+        }
+        .question {
+            margin-bottom: 25px;
+            padding: 20px;
+            border-right: 6px solid #27ae60;
+            background: #fdfdfd;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+        }
+        .question p {
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-top: 0;
+            color: #2c3e50;
+        }
+        .options {
+            list-style: none;
+            padding: 0;
+        }
+        .options li {
+            margin: 12px 0;
+            padding: 12px 15px;
+            background: #f1f1f1;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+        }
+        .options li:hover {
+            background: #e1e1e1;
+        }
+        .options input {
+            margin-left: 15px;
+            transform: scale(1.2);
+            cursor: pointer;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 18px;
+            background: #e74c3c;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 30px;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background: #c0392b;
+        }
+        #result {
+            margin-top: 25px;
+            padding: 25px;
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
+            display: none;
+            border-radius: 12px;
+            border: 2px solid transparent;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #888;
+            font-size: 0.9em;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+        /* العبارة المطلوبة باللون الأزرق */
+        .tech-club {
+            color: #0056b3;
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-top: 15px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>🇵🇸 اختبار التوعية بقضية الأسرى</h1>
+    <p class="intro-text">شارك في الاختبار لتعزيز معرفتك بقضية أسرى الحرية</p>
+    
+    <form id="quizForm">
+        <div class="question">
+            <p>1. ما الهدف من التوعية الطلابية بقضية الأسرى؟</p>
+            <ul class="options">
+                <li><input type="radio" name="q1" value="0"> الترفيه</li>
+                <li><input type="radio" name="q1" value="1"> زيادة الوعي والمسؤولية المجتمعية</li>
+                <li><input type="radio" name="q1" value="0"> إضاعة الوقت</li>
+                <li><input type="radio" name="q1" value="0"> تقليل الدراسة</li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <p>2. أي من التالي يُعتبر وسيلة لنقل قضية الأسرى إلى العالم؟</p>
+            <ul class="options">
+                <li><input type="radio" name="q2" value="0"> الصمت</li>
+                <li><input type="radio" name="q2" value="1"> نشر القصص والتقارير</li>
+                <li><input type="radio" name="q2" value="0"> تجاهل القضية</li>
+                <li><input type="radio" name="q2" value="0"> إخفاء المعلومات</li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <p>3. ما الفرق الأساسي بين الأسير والمعتقل الإداري؟</p>
+            <ul class="options">
+                <li><input type="radio" name="q3" value="0"> لا يوجد فرق</li>
+                <li><input type="radio" name="q3" value="1"> الإداري لا يُقدم للمحاكمة</li>
+                <li><input type="radio" name="q3" value="0"> الأسير لا يُحاكم</li>
+                <li><input type="radio" name="q3" value="0"> الإداري يُحاكم أكثر</li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <p>4. أي من التالي يُعتبر سمة أساسية للاعتقال الإداري؟</p>
+            <ul class="options">
+                <li><input type="radio" name="q4" value="0"> وجود حكم قضائي نهائي</li>
+                <li><input type="radio" name="q4" value="0"> تحديد مدة ثابتة لا تتغير</li>
+                <li><input type="radio" name="q4" value="1"> إمكانية التجديد بدون محاكمة</li>
+                <li><input type="radio" name="q4" value="0"> وجود هيئة محلفين</li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <p>5. أي من الفئات التالية شهدت حالات اعتقال ضمن الأسرى الفلسطينيين؟</p>
+            <ul class="options">
+                <li><input type="radio" name="q5" value="0"> الأطفال</li>
+                <li><input type="radio" name="q5" value="0"> النساء</li>
+                <li><input type="radio" name="q5" value="0"> كبار السن</li>
+                <li><input type="radio" name="q5" value="1"> جميع ما سبق</li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <p>6. أي من التالي يُستخدم لوصف عزل الأسير عن باقي الأسرى لفترة طويلة؟</p>
+            <ul class="options">
+                <li><input type="radio" name="q6" value="0"> الاعتقال المفتوح</li>
+                <li><input type="radio" name="q6" value="1"> العزل الانفرادي</li>
+                <li><input type="radio" name="q6" value="0"> الحرية المؤقتة</li>
+                <li><input type="radio" name="q6" value="0"> النقل الجماعي</li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <p>7. أي من التالي يُعد من وسائل احتجاج الأسرى داخل السجون؟</p>
+            <ul class="options">
+                <li><input type="radio" name="q7" value="0"> السفر</li>
+                <li><input type="radio" name="q7" value="1"> الإضراب عن الطعام</li>
+                <li><input type="radio" name="q7" value="0"> الدراسة فقط</li>
+                <li><input type="radio" name="q7" value="0"> الترفيه</li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <p>8. ما اسم الهيئة الفلسطينية المختصة بشؤون الأسرى؟</p>
+            <ul class="options">
+                <li><input type="radio" name="q8" value="0"> وزارة التعليم</li>
+                <li><input type="radio" name="q8" value="1"> هيئة شؤون الأسرى والمحررين</li>
+                <li><input type="radio" name="q8" value="0"> وزارة السياحة</li>
+                <li><input type="radio" name="q8" value="0"> وزارة النقل</li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <p>9. أي جهة قانونية دولية تُعنى بحماية حقوق الأسرى أثناء النزاعات؟</p>
+            <ul class="options">
+                <li><input type="radio" name="q9" value="0"> منظمة التجارة العالمية</li>
+                <li><input type="radio" name="q9" value="1"> اتفاقيات جنيف</li>
+                <li><input type="radio" name="q9" value="0"> اليونسكو</li>
+                <li><input type="radio" name="q9" value="0"> البنك الدولي</li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <p>10. متى يُحيي الفلسطينيون يوم الأسير؟</p>
+            <ul class="options">
+                <li><input type="radio" name="q10" value="0"> 1 يناير</li>
+                <li><input type="radio" name="q10" value="1"> 17 أبريل</li>
+                <li><input type="radio" name="q10" value="0"> 15 مايو</li>
+                <li><input type="radio" name="q10" value="0"> 10 ديسمبر</li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <p>11. ما المقصود بالاعتقال الإداري؟</p>
+            <ul class="options">
+                <li><input type="radio" name="q11" value="0"> سجن بعد محاكمة علنية</li>
+                <li><input type="radio" name="q11" value="1"> احتجاز بدون تهمة أو محاكمة لفترة قابلة للتجديد</li>
+                <li><input type="radio" name="q11" value="0"> غرامة مالية</li>
+                <li><input type="radio" name="q11" value="0"> عقوبة دراسية</li>
+            </ul>
+        </div>
+
+        <button type="button" onclick="checkResult()">إرسال الإجابات وعرض النتيجة</button>
+    </form>
+
+    <div id="result"></div>
+    
+    <div class="footer">
+        <div>الحرية للأسرى .. المجد للوطن</div>
+        <span class="tech-club">النادي التكنولوجي - الكلية الجامعية للعلوم التطبيقية</span>
+    </div>
+</div>
+
+<script>
+    function checkResult() {
+        let score = 0;
+        let totalQuestions = 11;
+        let form = document.getElementById('quizForm');
+        let formData = new FormData(form);
+
+        let answeredQuestions = 0;
+        for (let value of formData.values()) {
+            score += parseInt(value);
+            answeredQuestions++;
+        }
+
+        let resultDiv = document.getElementById('result');
+        resultDiv.style.display = 'block';
+        
+        if (answeredQuestions < totalQuestions) {
+            resultDiv.style.background = "#fff3cd";
+            resultDiv.style.borderColor = "#ffeeba";
+            resultDiv.style.color = "#856404";
+            resultDiv.innerHTML = "يرجى الإجابة على جميع الأسئلة (أجبت على " + answeredQuestions + " من " + totalQuestions + ")";
+            return;
+        }
+
+        resultDiv.innerHTML = "درجتك النهائية: " + score + " من " + totalQuestions;
+        
+        if(score >= 9) {
+            resultDiv.style.background = "#d4edda";
+            resultDiv.style.borderColor = "#c3e6cb";
+            resultDiv.style.color = "#155724";
+            resultDiv.innerHTML += "<br> ممتاز! وعيك بقضية الأسرى مشرف جداً.";
+        } else if(score >= 6) {
+            resultDiv.style.background = "#d1ecf1";
+            resultDiv.style.borderColor = "#bee5eb";
+            resultDiv.style.color = "#0c5460";
+            resultDiv.innerHTML += "<br> جيد، ولكن ننصحك بالقراءة أكثر عن تفاصيل قضية الأسرى.";
+        } else {
+            resultDiv.style.background = "#f8d7da";
+            resultDiv.style.borderColor = "#f5c6cb";
+            resultDiv.style.color = "#721c24";
+            resultDiv.innerHTML += "<br> من المهم مراجعة المعلومات حول قضيتنا الوطنية.";
+        }
+        
+        resultDiv.scrollIntoView({ behavior: 'smooth' });
+    }
+</script>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اختبار التوعية بقضية الأسرى الفلسطينيين</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        .container {
+            max-width: 850px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #1a5d1a;
+            border-bottom: 4px solid #e74c3c;
+            padding-bottom: 15px;
+            margin-bottom: 10px;
+        }
+        .intro-text {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+        }
+        .question {
+            margin-bottom: 25px;
+            padding: 20px;
+            border-right: 6px solid #27ae60;
+            background: #fdfdfd;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+        }
+        .question p {
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-top: 0;
+            color: #2c3e50;
+        }
+        .options {
+            list-style: none;
+            padding: 0;
+        }
+        .options li {
+            margin: 12px 0;
+            padding: 12px 15px;
+            background: #f1f1f1;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+        }
+        .options li:hover {
+            background: #e1e1e1;
+        }
+        .options input {
+            margin-left: 15px;
+            transform: scale(1.2);
+            cursor: pointer;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 18px;
+            background: #e74c3c;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 30px;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background: #c0392b;
+        }
+        #result {
+            margin-top: 25px;
+            padding: 25px;
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
+            display: none;
+            border-radius: 12px;
+            border: 2px solid transparent;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #888;
+            font-size: 0.9em;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+        /* العبارة المطلوبة باللون الأزرق */
+        .tech-club {
+            color: #0056b3;
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-top: 15px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>🇵🇸 اختبار التوعية بقضية الأسرى</h1>
+    <p class="intro-text">شارك في الاختبار لتعزيز معرفتك بقضية أسرى الحرية</p>
+    
+    <form id="quizForm">
+        <div class="question">
+            <p>1. ما الهدف من التوعية الطلابية بقضية الأسرى؟</p>
+            <ul class="options">
+                <li><input type="radio" name="q1" value="0"> الترفيه</li>
+                <li><input type="radio" name="q1" value="1"> زيادة الوعي والمسؤولية المجتمعية</li>
+                <li><input type="radio" name="q1" value="0"> إضاعة الوقت</li>
+                <li><input type="radio" name="q1" value="0"> تقليل الدراسة</li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <p>2. أي من التالي يُعتبر وسيلة لنقل قضية الأسرى إلى العالم؟</p>
+            <ul class="options">
+                <li><input type="radio" name="q2" value="0"> الصمت</li>
+                <li><input type="radio" name="q2" value="1"> نشر القصص والتقارير</li>
+                <li><input type="radio" name="q2" value="0"> تجاهل القضية</li>
+                <li><input type="radio" name="q2" value="0"> إخفاء المعلومات</li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <p>3. ما الفرق الأساسي بين الأسير والمعتقل الإداري؟</p>
+            <ul class="options">
+                <li><input type="radio" name="q3" value="0"> لا يوجد فرق</li>
+                <li><input type="radio" name="q3" value="1"> الإداري لا يُقدم للمحاكمة</li>
+                <li><input type="radio" name="q3" value="0"> الأسير لا يُحاكم</li>
+                <li><input type="radio" name="q3" value="0"> الإداري يُحاكم أكثر</li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <p>4. أي من التالي يُعتبر سمة أساسية للاعتقال الإداري؟</p>
+            <ul class="options">
+                <li><input type="radio" name="q4" value="0"> وجود حكم قضائي نهائي</li>
+                <li><input type="radio" name="q4" value="0"> تحديد مدة ثابتة لا تتغير</li>
+                <li><input type="radio" name="q4" value="1"> إمكانية التجديد بدون محاكمة</li>
+                <li><input type="radio" name="q4" value="0"> وجود هيئة محلفين</li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <p>5. أي من الفئات التالية شهدت حالات اعتقال ضمن الأسرى الفلسطينيين؟</p>
+            <ul class="options">
+                <li><input type="radio" name="q5" value="0"> الأطفال</li>
+                <li><input type="radio" name="q5" value="0"> النساء</li>
+                <li><input type="radio" name="q5" value="0"> كبار السن</li>
+                <li><input type="radio" name="q5" value="1"> جميع ما سبق</li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <p>6. أي من التالي يُستخدم لوصف عزل الأسير عن باقي الأسرى لفترة طويلة؟</p>
+            <ul class="options">
+                <li><input type="radio" name="q6" value="0"> الاعتقال المفتوح</li>
+                <li><input type="radio" name="q6" value="1"> العزل الانفرادي</li>
+                <li><input type="radio" name="q6" value="0"> الحرية المؤقتة</li>
+                <li><input type="radio" name="q6" value="0"> النقل الجماعي</li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <p>7. أي من التالي يُعد من وسائل احتجاج الأسرى داخل السجون؟</p>
+            <ul class="options">
+                <li><input type="radio" name="q7" value="0"> السفر</li>
+                <li><input type="radio" name="q7" value="1"> الإضراب عن الطعام</li>
+                <li><input type="radio" name="q7" value="0"> الدراسة فقط</li>
+                <li><input type="radio" name="q7" value="0"> الترفيه</li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <p>8. ما اسم الهيئة الفلسطينية المختصة بشؤون الأسرى؟</p>
+            <ul class="options">
+                <li><input type="radio" name="q8" value="0"> وزارة التعليم</li>
+                <li><input type="radio" name="q8" value="1"> هيئة شؤون الأسرى والمحررين</li>
+                <li><input type="radio" name="q8" value="0"> وزارة السياحة</li>
+                <li><input type="radio" name="q8" value="0"> وزارة النقل</li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <p>9. أي جهة قانونية دولية تُعنى بحماية حقوق الأسرى أثناء النزاعات؟</p>
+            <ul class="options">
+                <li><input type="radio" name="q9" value="0"> منظمة التجارة العالمية</li>
+                <li><input type="radio" name="q9" value="1"> اتفاقيات جنيف</li>
+                <li><input type="radio" name="q9" value="0"> اليونسكو</li>
+                <li><input type="radio" name="q9" value="0"> البنك الدولي</li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <p>10. متى يُحيي الفلسطينيون يوم الأسير؟</p>
+            <ul class="options">
+                <li><input type="radio" name="q10" value="0"> 1 يناير</li>
+                <li><input type="radio" name="q10" value="1"> 17 أبريل</li>
+                <li><input type="radio" name="q10" value="0"> 15 مايو</li>
+                <li><input type="radio" name="q10" value="0"> 10 ديسمبر</li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <p>11. ما المقصود بالاعتقال الإداري؟</p>
+            <ul class="options">
+                <li><input type="radio" name="q11" value="0"> سجن بعد محاكمة علنية</li>
+                <li><input type="radio" name="q11" value="1"> احتجاز بدون تهمة أو محاكمة لفترة قابلة للتجديد</li>
+                <li><input type="radio" name="q11" value="0"> غرامة مالية</li>
+                <li><input type="radio" name="q11" value="0"> عقوبة دراسية</li>
+            </ul>
+        </div>
+
+        <button type="button" onclick="checkResult()">إرسال الإجابات وعرض النتيجة</button>
+    </form>
+
+    <div id="result"></div>
+    
+    <div class="footer">
+        <div>الحرية للأسرى .. المجد للوطن</div>
+        <span class="tech-club">النادي التكنولوجي - الكلية الجامعية للعلوم التطبيقية</span>
+    </div>
+</div>
+
+<script>
+    function checkResult() {
+        let score = 0;
+        let totalQuestions = 11;
+        let form = document.getElementById('quizForm');
+        let formData = new FormData(form);
+
+        let answeredQuestions = 0;
+        for (let value of formData.values()) {
+            score += parseInt(value);
+            answeredQuestions++;
+        }
+
+        let resultDiv = document.getElementById('result');
+        resultDiv.style.display = 'block';
+        
+        if (answeredQuestions < totalQuestions) {
+            resultDiv.style.background = "#fff3cd";
+            resultDiv.style.borderColor = "#ffeeba";
+            resultDiv.style.color = "#856404";
+            resultDiv.innerHTML = "يرجى الإجابة على جميع الأسئلة (أجبت على " + answeredQuestions + " من " + totalQuestions + ")";
+            return;
+        }
+
+        resultDiv.innerHTML = "درجتك النهائية: " + score + " من " + totalQuestions;
+        
+        if(score >= 9) {
+            resultDiv.style.background = "#d4edda";
+            resultDiv.style.borderColor = "#c3e6cb";
+            resultDiv.style.color = "#155724";
+            resultDiv.innerHTML += "<br> ممتاز! وعيك بقضية الأسرى مشرف جداً.";
+        } else if(score >= 6) {
+            resultDiv.style.background = "#d1ecf1";
+            resultDiv.style.borderColor = "#bee5eb";
+            resultDiv.style.color = "#0c5460";
+            resultDiv.innerHTML += "<br> جيد، ولكن ننصحك بالقراءة أكثر عن تفاصيل قضية الأسرى.";
+        } else {
+            resultDiv.style.background = "#f8d7da";
+            resultDiv.style.borderColor = "#f5c6cb";
+            resultDiv.style.color = "#721c24";
+            resultDiv.innerHTML += "<br> من المهم مراجعة المعلومات حول قضيتنا الوطنية.";
+        }
+        
+        resultDiv.scrollIntoView({ behavior: 'smooth' });
+    }
+</script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اختبار التوعية بقضية الأسرى الفلسطينيين</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        .container {
+            max-width: 850px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #1a5d1a;
+            border-bottom: 4px solid #e74c3c;
+            padding-bottom: 15px;
+            margin-bottom: 10px;
+        }
+        .intro-text {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+        }
+        .question {
+            margin-bottom: 25px;
+            padding: 20px;
+            border-right: 6px solid #27ae60;
+            background: #fdfdfd;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+        }
+        .question p {
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-top: 0;
+            color: #2c3e50;
+        }
+        .options {
+            list-style: none;
+            padding: 0;
+        }
+        .options li {
+            margin: 12px 0;
+            padding: 12px 15px;
+            background: #f1f1f1;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+        }
+        .options li:hover {
+            background: #e1e1e1;
+        }
+        .options input {
+            margin-left: 15px;
+            transform: scale(1.2);
+            cursor: pointer;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 18px;
+            background: #e74c3c;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 30px;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background: #c0392b;
+        }
+        #result {
+            margin-top: 25px;
+            padding: 25px;
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
+            display: none;
+            border-radius: 12px;
+            border: 2px solid transparent;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #888;
+            font-size: 0.9em;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+        /* العبارة المطلوبة باللون الأزرق */
+        .tech-club {
+            color: #0056b3;
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-top: 15px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>🇵🇸 اختبار التوعية بقضية الأسرى</h1>
+    <p class="intro-text">شارك في الاختبار لتعزيز معرفتك بقضية أسرى الحرية</p>
+    
+    <form id="quizForm">
+        <div class="question">
+            <p>1. ما الهدف من التوعية الطلابية بقضية الأسرى؟</p>
+            <ul class="options">
+                <li><input type="radio" name="q1" value="0"> الترفيه</li>
+                <li><input type="radio" name="q1" value="1"> زيادة الوعي والمسؤولية المجتمعية</li>
+                <li><input type="radio" name="q1" value="0"> إضاعة الوقت</li>
+                <li><input type="radio" name="q1" value="0"> تقليل الدراسة</li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <p>2. أي من التالي يُعتبر وسيلة لنقل قضية الأسرى إلى العالم؟</p>
+            <ul class="options">
+                <li><input type="radio" name="q2" value="0"> الصمت</li>
+                <li><input type="radio" name="q2" value="1"> نشر القصص والتقارير</li>
+                <li><input type="radio" name="q2" value="0"> تجاهل القضية</li>
+                <li><input type="radio" name="q2" value="0"> إخفاء المعلومات</li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <p>3. ما الفرق الأساسي بين الأسير والمعتقل الإداري؟</p>
+            <ul class="options">
+                <li><input type="radio" name="q3" value="0"> لا يوجد فرق</li>
+                <li><input type="radio" name="q3" value="1"> الإداري لا يُقدم للمحاكمة</li>
+                <li><input type="radio" name="q3" value="0"> الأسير لا يُحاكم</li>
+                <li><input type="radio" name="q3" value="0"> الإداري يُحاكم أكثر</li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <p>4. أي من التالي يُعتبر سمة أساسية للاعتقال الإداري؟</p>
+            <ul class="options">
+                <li><input type="radio" name="q4" value="0"> وجود حكم قضائي نهائي</li>
+                <li><input type="radio" name="q4" value="0"> تحديد مدة ثابتة لا تتغير</li>
+                <li><input type="radio" name="q4" value="1"> إمكانية التجديد بدون محاكمة</li>
+                <li><input type="radio" name="q4" value="0"> وجود هيئة محلفين</li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <p>5. أي من الفئات التالية شهدت حالات اعتقال ضمن الأسرى الفلسطينيين؟</p>
+            <ul class="options">
+                <li><input type="radio" name="q5" value="0"> الأطفال</li>
+                <li><input type="radio" name="q5" value="0"> النساء</li>
+                <li><input type="radio" name="q5" value="0"> كبار السن</li>
+                <li><input type="radio" name="q5" value="1"> جميع ما سبق</li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <p>6. أي من التالي يُستخدم لوصف عزل الأسير عن باقي الأسرى لفترة طويلة؟</p>
+            <ul class="options">
+                <li><input type="radio" name="q6" value="0"> الاعتقال المفتوح</li>
+                <li><input type="radio" name="q6" value="1"> العزل الانفرادي</li>
+                <li><input type="radio" name="q6" value="0"> الحرية المؤقتة</li>
+                <li><input type="radio" name="q6" value="0"> النقل الجماعي</li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <p>7. أي من التالي يُعد من وسائل احتجاج الأسرى داخل السجون؟</p>
+            <ul class="options">
+                <li><input type="radio" name="q7" value="0"> السفر</li>
+                <li><input type="radio" name="q7" value="1"> الإضراب عن الطعام</li>
+                <li><input type="radio" name="q7" value="0"> الدراسة فقط</li>
+                <li><input type="radio" name="q7" value="0"> الترفيه</li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <p>8. ما اسم الهيئة الفلسطينية المختصة بشؤون الأسرى؟</p>
+            <ul class="options">
+                <li><input type="radio" name="q8" value="0"> وزارة التعليم</li>
+                <li><input type="radio" name="q8" value="1"> هيئة شؤون الأسرى والمحررين</li>
+                <li><input type="radio" name="q8" value="0"> وزارة السياحة</li>
+                <li><input type="radio" name="q8" value="0"> وزارة النقل</li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <p>9. أي جهة قانونية دولية تُعنى بحماية حقوق الأسرى أثناء النزاعات؟</p>
+            <ul class="options">
+                <li><input type="radio" name="q9" value="0"> منظمة التجارة العالمية</li>
+                <li><input type="radio" name="q9" value="1"> اتفاقيات جنيف</li>
+                <li><input type="radio" name="q9" value="0"> اليونسكو</li>
+                <li><input type="radio" name="q9" value="0"> البنك الدولي</li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <p>10. متى يُحيي الفلسطينيون يوم الأسير؟</p>
+            <ul class="options">
+                <li><input type="radio" name="q10" value="0"> 1 يناير</li>
+                <li><input type="radio" name="q10" value="1"> 17 أبريل</li>
+                <li><input type="radio" name="q10" value="0"> 15 مايو</li>
+                <li><input type="radio" name="q10" value="0"> 10 ديسمبر</li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <p>11. ما المقصود بالاعتقال الإداري؟</p>
+            <ul class="options">
+                <li><input type="radio" name="q11" value="0"> سجن بعد محاكمة علنية</li>
+                <li><input type="radio" name="q11" value="1"> احتجاز بدون تهمة أو محاكمة لفترة قابلة للتجديد</li>
+                <li><input type="radio" name="q11" value="0"> غرامة مالية</li>
+                <li><input type="radio" name="q11" value="0"> عقوبة دراسية</li>
+            </ul>
+        </div>
+
+        <button type="button" onclick="checkResult()">إرسال الإجابات وعرض النتيجة</button>
+    </form>
+
+    <div id="result"></div>
+    
+    <div class="footer">
+        <div>الحرية للأسرى .. المجد للوطن</div>
+        <span class="tech-club">النادي التكنولوجي - الكلية الجامعية للعلوم التطبيقية</span>
+    </div>
+</div>
+
+<script>
+    function checkResult() {
+        let score = 0;
+        let totalQuestions = 11;
+        let form = document.getElementById('quizForm');
+        let formData = new FormData(form);
+
+        let answeredQuestions = 0;
+        for (let value of formData.values()) {
+            score += parseInt(value);
+            answeredQuestions++;
+        }
+
+        let resultDiv = document.getElementById('result');
+        resultDiv.style.display = 'block';
+        
+        if (answeredQuestions < totalQuestions) {
+            resultDiv.style.background = "#fff3cd";
+            resultDiv.style.borderColor = "#ffeeba";
+            resultDiv.style.color = "#856404";
+            resultDiv.innerHTML = "يرجى الإجابة على جميع الأسئلة (أجبت على " + answeredQuestions + " من " + totalQuestions + ")";
+            return;
+        }
+
+        resultDiv.innerHTML = "درجتك النهائية: " + score + " من " + totalQuestions;
+        
+        if(score >= 9) {
+            resultDiv.style.background = "#d4edda";
+            resultDiv.style.borderColor = "#c3e6cb";
+            resultDiv.style.color = "#155724";
+            resultDiv.innerHTML += "<br> ممتاز! وعيك بقضية الأسرى مشرف جداً.";
+        } else if(score >= 6) {
+            resultDiv.style.background = "#d1ecf1";
+            resultDiv.style.borderColor = "#bee5eb";
+            resultDiv.style.color = "#0c5460";
+            resultDiv.innerHTML += "<br> جيد، ولكن ننصحك بالقراءة أكثر عن تفاصيل قضية الأسرى.";
+        } else {
+            resultDiv.style.background = "#f8d7da";
+            resultDiv.style.borderColor = "#f5c6cb";
+            resultDiv.style.color = "#721c24";
+            resultDiv.innerHTML += "<br> من المهم مراجعة المعلومات حول قضيتنا الوطنية.";
+        }
+        
+        resultDiv.scrollIntoView({ behavior: 'smooth' });
     }
 </script>
 
